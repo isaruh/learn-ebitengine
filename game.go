@@ -103,13 +103,13 @@ func (g *game) Update() error {
 		g.playerVelocity = -1
 	}
 
-	if ebiten.IsKeyPressed(ebiten.KeyA) {
+	if ebiten.IsKeyPressed(ebiten.KeyA) || ebiten.IsKeyPressed(ebiten.KeyArrowLeft) {
 		if g.playerX > 0 {
 			g.playerX += -1
 		}
 	}
 
-	if ebiten.IsKeyPressed(ebiten.KeyD) {
+	if ebiten.IsKeyPressed(ebiten.KeyD) || ebiten.IsKeyPressed(ebiten.KeyArrowRight) {
 		if g.playerX < screenW - playerW {
 			g.playerX += 1
 		}
